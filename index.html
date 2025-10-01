@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор доставки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h1>📦 Калькулятор доставки</h1>
+
+    <div class="row">
+      <label>Курс ¥:</label>
+      <input type="number" id="rate" value="13">
+    </div>
+
+    <div class="row">
+      <label>Курс на Южных Воротах ¥:</label>
+      <input type="number" id="rate-gate" value="13">
+    </div>
+
+    <div class="row">
+      <label>Тариф (₽/кг):</label>
+      <input type="number" id="tariff" value="650">
+    </div>
+
+    <div class="row">
+      <label>Стоимость упаковки (₽):</label>
+      <input type="number" id="package" value="0">
+      <input type="checkbox" id="package-check"> Включить
+    </div>
+
+    <div class="row">
+      <label>Цена товара (¥):</label>
+      <input type="number" id="price" placeholder="Введите цену">
+    </div>
+
+    <div class="row">
+      <label>Количество единиц:</label>
+      <input type="number" id="quantity" value="1">
+    </div>
+
+    <div class="row">
+      <label>Вес товара:</label>
+      <select id="weight">
+        <option value="">Выберите...</option>
+        <option value="400">Комплект одежды — 400 г</option>
+        <option value="50">Ползунки — 50 г</option>
+        <option value="600">Спортивный костюм — 600 г</option>
+        <option value="30">Трусы/майка — 30 г</option>
+        <option value="20">Носки — 20 г</option>
+        <option value="350">Свитер — 350 г</option>
+        <option value="200">Пижама — 200 г</option>
+        <option value="500">Ветровка — 500 г</option>
+        <option value="80">Футболка — 80 г</option>
+        <option value="150">Рубашка — 150 г</option>
+        <option value="1000">Зимняя куртка — 1000 г</option>
+        <option value="200">Платье — 200 г</option>
+        <option value="100">Шапка — 100 г</option>
+        <option value="400">Джинсы — 400 г</option>
+        <option value="150">Шарф — 150 г</option>
+        <option value="150">Шорты — 150 г</option>
+        <option value="80">Перчатки — 80 г</option>
+        <option value="250">Юбка — 250 г</option>
+        <option value="200">Тапки — 200 г</option>
+        <option value="800">Ботинки — 800 г</option>
+        <option value="500">Сандалии — 500 г</option>
+        <option value="1000">Сапоги — 1000 г</option>
+        <option value="800">Кроссовки — 800 г</option>
+        <option value="1000">Резиновые сапоги — 1000 г</option>
+        <option value="600">Туфли — 600 г</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>Другое (г):</label>
+      <input type="number" id="custom-weight" placeholder="Введите вес вручную">
+    </div>
+
+    <div class="row">
+      <label>Комиссия 15%:</label>
+      <input type="checkbox" id="commission-check" checked> Включить
+    </div>
+
+    <h2 id="result">Итого: 0 ₽</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
